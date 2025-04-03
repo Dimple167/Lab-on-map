@@ -35,10 +35,8 @@ public:
 class Solution {
 public:
     vector<int> topKFrequent(vector<int>& nums, int k) {
-        // Step 1: Sort the array to group identical elements together
         sort(nums.begin(), nums.end());
 
-        // Step 2: Count frequency of each unique number
         vector<pair<int, int>> frequencyList; // (count, number)
         int currentCount = 1;
         
@@ -51,10 +49,9 @@ public:
             }
         }
 
-        // Step 3: Sort by frequency in descending order
         sort(frequencyList.begin(), frequencyList.end(), greater<>());
 
-        // Step 4: Extract the top K elements
+        
         vector<int> topKElements;
         for (int i = 0; i < k; i++) {
             topKElements.push_back(frequencyList[i].second);
@@ -132,5 +129,3 @@ public:
 
 ---
 
-**📌 Note:** Replace each `// Your solution code here` with your actual solution code. 🚀  
-Let me know if you need any modifications! 😊
